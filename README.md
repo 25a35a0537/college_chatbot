@@ -1,4 +1,4 @@
-# 🎓 AI College Enquiry Chatbot
+<img width="1887" height="960" alt="Screenshot 2026-06-26 150038" src="https://github.com/user-attachments/assets/0ee1f706-dd6b-4b27-b8b1-6f48f4cbdf1e" /># 🎓 AI College Enquiry Chatbot
 
 ## 📌 Project Overview
 
@@ -15,14 +15,11 @@ This project aims to reduce manual effort in handling repetitive enquiries while
 ---
 
 ## 📷 Screenshots
-
-Add screenshots of your project here.
-
-Example:
-
 * Home Page
+<img width="1898" height="875" alt="Screenshot 2026-06-26 150109" src="https://github.com/user-attachments/assets/33116fcd-bee5-4c01-ae11-63a416133cad" />
 * Chatbot Interface
-* FAQ Page
+  <img width="1887" height="960" alt="Screenshot 2026-06-26 150038" src="https://github.com/user-attachments/assets/286f638d-b17b-4024-aea7-274e16937b8c" />
+
 
 ---
 
