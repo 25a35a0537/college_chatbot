@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pragati Engineering College - 50 Comprehensive FAQs Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --navy: #20218b;
+            --orange: #f19305;
+            --text-dark: #2d3748;
+            --bg-light: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .faq-wrapper {
+            max-width: 1050px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-top: 6px solid var(--navy);
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px dashed #e2e8f0;
+            padding-bottom: 25px;
+        }
+
+        .faq-header h1 {
+            color: var(--navy);
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .faq-header p {
+            color: #718096;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .sector-section {
+            margin-bottom: 40px;
+        }
+
+        .sector-title {
+            background-color: #f1f5f9;
+            color: var(--navy);
+            padding: 14px 20px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-left: 5px solid var(--orange);
+        }
+
+        /* 🌟 PREMIUM ACCORDION DROPDOWN STYLES */
+        .faq-node {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.25s ease;
+        }
+
+        .faq-question-trigger {
+            padding: 18px 20px;
+            font-weight: 700;
+            font-size: 0.98rem;
+            color: #1a202c;
+            background-color: #fff;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: background-color 0.2s;
+        }
+
+        .faq-question-trigger:hover {
+            background-color: #f8fafc;
+            color: var(--navy);
+        }
+
+        .faq-answer-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+            background-color: #fdfdfd;
+        }
+
+        .faq-answer-content {
+            padding: 20px;
+            font-size: 0.94rem;
+            color: #4a5568;
+            border-top: 1px solid #f1f5f9;
+            line-height: 1.7;
+        }
+
+        /* Active Toggle states managed by Javascript dynamic hooks */
+        .faq-node.active-node {
+            border-color: var(--navy);
+            box-shadow: 0 4px 20px rgba(32, 33, 139, 0.06);
+        }
+
+        .faq-node.active-node .faq-question-trigger {
+            background-color: #f0f2ff;
+            color: var(--navy);
+        }
+
+        .faq-node.active-node .faq-answer-panel {
+            max-height: 2000px; /* Large boundary limit to fit contents seamlessly */
+            transition: max-height 0.4s ease-in-out;
+        }
+
+        .chevron-icon {
+            transition: transform 0.25s ease;
+            color: #a0aec0;
+        }
+
+        .faq-node.active-node .chevron-icon {
+            transform: rotate(180deg);
+            color: var(--orange);
+        }
+
+        .highlight-no { color: #e53e3e; font-weight: 700; }
+        .highlight-yes { color: #38a169; font-weight: 700; }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--navy);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            transition: background 0.2s;
+        }
+        .back-btn:hover { background-color: #151663; }
+    </style>
+</head>
+<body>
+
+    <div class="faq-wrapper">
+        <a href="/" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+        
+        <div class="faq-header">
+            <h1>🏫 Central Knowledge FAQ Repository</h1>
+            <p>50 Comprehensive verified student/parent questions managed by sector-specific blocks.</p>
+        </div>
+
+        <!-- 🏢 SECTOR 1: HOSTEL ACCOMMODATION (Q1-Q7) -->
+        <div class="sector-section">
+            <div class="sector-title"><i class="fa-solid fa-building-user"></i> Sector 1: Hostel Accommodation & Residential Life</div>
+            
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q1: Is there a hostel facility for girls inside the college campus?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content"><span class="highlight-no">No, currently there is NO Girls Hostel facility</span> functional within the campus parameters. Residential quarters are restricted exclusively to boys at this moment.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q2: What are the boys' hostel charges per month?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The residential fee structure for boys is approximately <strong>₹6,000 per month</strong>.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q3: What amenities are provided inside the boys' hostel rooms?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">Rooms are equipped with standard beds, reference study tables, storage cupboards, high-speed ventilation sets, and regular maintenance networks.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q4: Is there an uninterrupted power supply for hostlers?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content"><span class="highlight-yes">Yes</span>, the campus hosts robust dedicated heavy generator sets to run continuous backup channels throughout night reference study hours.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q5: How is the security monitoring system inside the residential blocks?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">Full active security guards handle entrance gates, biometric tracking, and log records check 24/7.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q6: Who manages medical emergencies inside the hostel complex?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The Boys Hostel Warden coordinates with local vehicles to immediately shift students to nearby hospitals in emergency tracking loops.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q7: What type of food is served at the boys' residential mess hall?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">Nutritious South Indian traditional meals, balanced evening breakfast tiffins, and special meals are systematically arranged weekly.</div></div>
+            </div>
+        </div>
+
+        <!-- 💻 SECTOR 2: ACADEMIC FACULTY & HOD DIRECTORY (Q8-Q15) -->
+        <div class="sector-section">
+            <div class="sector-title"><i class="fa-solid fa-graduation-cap"></i> Sector 2: Academic Faculty Directory & HODs</div>
+            
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q8: Who is the Head of the Department (HOD) for CSE?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The Computer Science & Engineering department is led by <strong>Dr. D. V. Manjula</strong>.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q9: Can you name the key faculty teaching inside the CSE wing?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">Core instructional professors include <strong>Dr. M. Radhika, Sri. P. Surya, and Smt. S. Lakshmi</strong>.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q10: Who heads the specialized CSE - AI & ML department branch?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The branch is monitored directly under <strong>Dr. A. Radha Krishna</strong>.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q11: Who is the HOD for the artificial intelligence (PRAG-AI) course?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The designated department head is <strong>Smt. K. Lakshmi Viveka</strong>.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q12: Who coordinates the CSE Data Science track?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The section is managed comprehensively under <strong>Sri. M V Rajesh</strong>.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q13: Who is the official heading the ECE wing?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The Electronics & Communication Engineering HOD is <strong>Dr. V. Prasanth</strong>.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q14: Who is the HOD for Electrical (EEE) and Mechanical (ME) blocks?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content"><strong>Sri. K V Durga Prasad</strong> handles the EEE branch, while <strong>Dr. G. Avinash</strong> administers the Mechanical block.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q15: What is the highest qualification standard across core department teachers?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">A vast majority of senior department tracking incharges hold Doctorate degrees (Ph.D.) from recognized state and central universities.</div></div>
+            </div>
+        </div>
+
+        <!-- 🚌 SECTOR 3: TRANSPORT BUS SYSTEMS & FEES (Q16-Q22) -->
+        <div class="sector-section">
+            <div class="sector-title"><i class="fa-solid fa-bus"></i> Sector 3: Transport Networks, Timings & Routes</div>
+            
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q16: What is the yearly bus facility cost from Rajanagaram?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The transport fee for the Rajanagaram line route equates to exactly <strong>₹26,000 per academic year</strong>.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q17: How much does the Kakinada (KKD) bus route cost annually?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The Kakinada region transit card cost structure is <strong>₹25,000 per year</strong>.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q18: What are the transit charges for Samalkota and Pitapuram branches?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">Samalkota routes are priced at <strong>₹19,000</strong>, while Pitapuram lines track at <strong>₹23,000 per year</strong>.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q19: Who is the contact person if a bus is delayed?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">You should immediately call <strong>Mr. Ramesh (Transport Incharge)</strong> at his support cell line: <strong>+91 94901 23456</strong>.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q20: Do college buses operate during special semester lab examination days?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content"><span class="highlight-yes">Yes</span>, full coordination routes run systematically matching all custom university evaluation calendars.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q21: Are students allowed to shuffle between random bus routes using a single pass?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content"><span class="highlight-no">No</span>, route choices are fixed during seasonal payment structures to maintain precise tracking seat security boundaries.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q22: Is the transit infrastructure fee refundable if a student opts out mid-year?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">Transport allotments follow a non-refundable protocol once seats are checked and scheduled.</div></div>
+            </div>
+        </div>
+
+        <!-- 💰 SECTOR 4: COLLEGE FINANCES & FEE COMPONENT (Q23-Q29) -->
+        <div class="sector-section">
+            <div class="sector-title"><i class="fa-solid fa-credit-card"></i> Sector 4: College Fee Configurations & Expenses</div>
+            
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q23: What is the official autonomous annual tuition fee?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The core tuition matrix layer stands at <strong>₹77,800 per academic year</strong>.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q24: What is the dedicated CDC Training fee cost?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The compulsory career training modules alignment fee equates to <strong>₹15,000</strong>.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q25: How much does the campus uniform package block cost?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The uniform pricing check is <strong>₹1,300</strong>, which fully covers 2 complete pairs of custom garments given during intake.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q26: Are there separate computer laboratory network usage charges?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content"><span class="highlight-no">No</span>, advanced laboratory maintenance parameters are securely balanced inside the primary base tuition ledger accounts.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q27: Can fees be processed in multiple smaller installment divisions?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">Installment relaxation parameters require dynamic administrative check verification via the Principal office chambers.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q28: Does the college accept physical cash modes at counters?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">Online net banking, UPI pathways, and Bank Demand Drafts (DD) are heavily preferred tracking paths.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q29: Are autonomous university examination evaluation ledger fees integrated within tuition?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content"><span class="highlight-no">No</span>, semester end examination application forms track individual registration fees during operational turn notices.</div></div>
+            </div>
+        </div>
+
+        <!-- 🚀 SECTOR 5: CDC PLACEMENT DRIVES & ALLIANCES (Q30-Q37) -->
+        <div class="sector-section">
+            <div class="sector-title"><i class="fa-solid fa-briefcase"></i> Sector 5: CDC Placement Operations & Internships</div>
+            
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q30: How does the Career Development Centre (CDC) cell support job hunts?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The CDC manages multi-national campus drives, shares global virtual internship updates, and hosts mock evaluation cells.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q31: What training occurs on a weekly basis?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">Students undergo dedicated regular modules tracking **Quantitative Aptitude, Logical Reasoning, and Advanced Soft Skills**.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q32: Which external code validation platforms are used for tracking skill indicators?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">Continuous coding reviews are monitored through student dashboards configured on premium networks like **HackerRank and LeetCode**.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q33: What major global corporate cloud alliances are established here?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">Pragati boasts strong strategic integration setups with elite platforms like **ServiceNow and Salesforce**.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q34: Do students clear global cloud certification vouchers through college tie-ups?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content"><span class="highlight-yes">Yes</span>, hundreds of seniors systematically finish official system courses and crack direct interviews via ServiceNow programs.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q35: What is the criteria eligibility rules blueprint to step into placement drives?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">Generally, maintaining a clean academic track with no active backlogs and a minimum CGPA threshold of 6.5+ unlocks primary eligibility lines.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q36: Are paid industrial internship models allowed during terminal 8th semesters?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content"><span class="highlight-yes">Yes</span>, autonomous guidelines permit verified internships alongside provisional project submission schedules.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q37: Where can we review recent alumni placement package track logs?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">Official placement metrics matrices are posted instantly on our **LinkedIn school handle page** and main portal boards.</div></div>
+            </div>
+        </div>
+
+        <!-- 🏫 SECTOR 6: CAMPUS QUADRANTS & INFRASTRUCTURE (Q38-Q44) -->
+        <div class="sector-section">
+            <div class="sector-title"><i class="fa-solid fa-building"></i> Sector 6: Campus Blocks Layout & Library Timings</div>
+            
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q38: What specific sections are contained inside the Main Block buildings?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The Main block houses **CSE & IT branches**, elite programming labs, Principal Chambers, Seminar Halls, and the CDC Cell command room.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q39: Where are the ECE, Cyber Security, and Civil streams situated?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">These branches run operational spaces inside **Block 2** of the campus quadrant split.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q40: Which block holds the artificial intelligence (AI/AIML) and data science sectors?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">These emerging domain technologies sit exclusively inside **Block 4**.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q41: What are the library reading hour limitations on typical academic days?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">On normal days, access tracking limits a maximum 1-hour study stay inside specific slots: **12:00 PM to 1:30 PM** or **3:00 PM to 4:00 PM**.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q42: Does the library expand operational hours during core examinations?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content"><span class="highlight-yes">Yes</span>, borders are completely relaxed, permitting endless reference reading loops to handle exam preparation tracks.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q43: Is there an on-campus printing or photocopying cell shop?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">An active **Xerox facility shop** is conveniently open right adjacent to the central library complex layout block.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q44: What food options stand out inside the canteen during hot summer terms?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The canteen configures customized operational **fresh juice corners** to provide hydration support metrics.</div></div>
+            </div>
+        </div>
+
+        <!-- 🎉 SECTOR 7: EVENTS & HELP DESK METRICS (Q45-Q50) -->
+        <div class="sector-section">
+            <div class="sector-title"><i class="fa-solid fa-phone-volume"></i> Sector 7: Annual Festivals & Direct Help lines</div>
+            
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q45: What is the state-level technical festival conducted annually?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The engineering flagship technical fest is known as **STRIDES**, which features research paper contests and code sprints.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q46: What is the name of our annual cultural student talent celebration?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The cultural platform extravaganza tracks under the grand title of **PRISM**.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q47: When takes place the inside-campus traditional cultural samburalu?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The beautiful **Pongal celebrations** hit campus zones right a few days before seasonal family breaks.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q48: Does the engineering cluster support active national military defense wings?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content"><span class="highlight-yes">Yes</span>, full active **NCC support groups** organize drills and parade certificates on campus paths.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q49: What is the central office desk phone for general administrative verifications?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The primary registrar office pipeline number tracks under: **08852-252233**.</div></div>
+            </div>
+            <div class="faq-node">
+                <div class="faq-question-trigger"><span>Q50: What is the hotline for reaching the examination evaluation section?</span><i class="fa-solid fa-chevron-down chevron-icon"></i></div>
+                <div class="faq-answer-panel"><div class="faq-answer-content">The internal autonomous exam branch coordinator desk cell can be queried directly via: **+91 94901 77777**.</div></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 🌟 JAVA-SCRIPT ACCORDION DROPDOWN ENGINE -->
+    <script>
+        document.querySelectorAll('.faq-question-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const parentNode = trigger.parentElement;
+                
+                // Toggle active state on current click target
+                parentNode.classList.toggle('active-node');
+                
+                // Optional logic tracker: Close alternate nodes when opening a new choice segment
+                document.querySelectorAll('.faq-node').forEach(node => {
+                    if (node !== parentNode) {
+                        node.classList.remove('active-node');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

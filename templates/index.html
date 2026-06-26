@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Pragati Engineering College</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+ 
+
+  <main>
+ 
+    <!-- Header + Hero Section -->
+<header class="pec-header">
+  <div class="top-header">
+    <div class="header-inner">
+      <div class="logo-social">
+          <img src="{{ url_for('static', filename='assets/logo.png') }}" class="college-logo" alt="logo">
+
+        <div class="social-icons">
+          <span>f</span>
+          <span>t</span>
+          <span>in</span>
+          <span>◎</span>
+          <span>▶</span>
+        </div>
+      </div>
+
+      <div class="header-contact">
+        <div class="search-box">
+          <input type="text" placeholder="Search ...">
+          <span>⌕</span>
+        </div>
+
+        <div class="phone">☎ +91 7330826667</div>
+        <div class="email">pragati@pragati.ac.in</div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="orange-nav">
+    <div class="nav-container">
+      <a href="#">About Us</a>
+      <a href="#">Admissions</a>
+      <a href="#">Courses</a>
+      <a href="#">Departments</a>
+      <a href="#">Career Development Centre</a>
+      <a href="#">Library</a>
+      <a href="#">Campus life</a>
+      <a href="#">Examinations</a>
+      <a href="#">R&amp;D</a>
+      <a href="#">AICTE</a>
+      <a href="#">FACILITIES</a>
+      <a href="#">NIRF</a>
+      <a href="#">IQAC</a>
+    </div>
+  </nav>
+
+  <nav class="blue-nav">
+    <a href="#">ABOUT US⌄</a>
+    <a href="#">ADMISSIONS</a>
+    <a href="#">COURSES</a>
+    <a href="#">DEPARTMENTS⌄</a>
+    <a href="#">CAREER DEVELOPMENT CENTRE⌄</a>
+    <a href="#">LIBRARY⌄</a>
+    <a href="#">CAMPUS LIFE⌄</a>
+    <a href="#">EXAMINATIONS⌄</a>
+    <a href="#">R&amp;D⌄</a>
+    <a href="#">AICTE⌄</a>
+    <a href="#">FACILITIES</a>
+    <a href="#">NIRF</a>
+    <a href="#">IQAC</a>
+  </nav>
+</header>
+
+<section class="hero-section">
+  <div class="hero-overlay">
+    <img src="{{ url_for('static', filename='assets/hero-1.png') }}" alt="">
+  </div>
+
+  <div class="hero-content">
+    <p>A Place to Learn &amp;</p>
+    <p>A Dream to Prosper</p>
+    <div class="underline"></div>
+    <h1>PRAGATI</h1>
+    <h2>Engineering College</h2>
+  </div>
+</section>
+
+<section class="accreditation-section">
+  <div class="accreditation-card">
+    <div>
+      <h3>Approved by</h3>
+      <h3>AICTE</h3>
+    </div>
+    <img src="{{ url_for('static', filename='assets/aicte.png') }}" alt="AICTE">
+    
+  </div>
+
+  <div class="accreditation-card">
+    <div>
+      <h3>Accredited by</h3>
+      <h3>NBA</h3>
+    </div>
+    <img src="{{ url_for('static', filename='assets/nba.png') }}" alt="NBA">
+  </div>
+
+  <div class="accreditation-card">
+    <div>
+      <h3>Accredited by</h3>
+      <h3>NAAC with A+</h3>
+      <h3>Grade</h3>
+    </div>
+    <img src="{{ url_for('static', filename='assets/naac.png') }}" alt="NAAC">
+  </div>
+</section>
+
+<!-- 1. Pink and Purple Dual Code Banner Section -->
+<div class="placement-code-banner">
+  <div class="info-box-pink">
+    Placements 2026 : 1347 (as on 30th April 2026)
+  </div>
+  <div class="info-box-purple">
+    EAPCET &amp; ECET CODE: <strong>PRAG</strong> PGCET CODE: <strong>PRAG1</strong>
+  </div>
+</div>
+
+<!-- 2. Interactive 3-Image Carousel Slider Showcase -->
+<section class="carousel-view-section">
+  <!-- Side Control Navigation Arrows -->
+  <button class="carousel-arrow arrow-left" onclick="moveCarouselLeft()">❮</button>
+  <button class="carousel-arrow arrow-right" onclick="moveCarouselRight()">❯</button>
+
+  <div class="carousel-viewport-container">
+    <div class="carousel-images-track" id="carouselTrack">
+      
+      <!-- Slide Item 1 -->
+      <div class="carousel-card-node">
+        <img src="{{ url_for('static', filename='assets/banner1.jpeg') }}" alt="Infosys 92 Selects">
+      </div>
+
+      <!-- Slide Item 2 -->
+      <div class="carousel-card-node">
+        <img src="{{ url_for('static', filename='assets/banner2.jpeg') }}" alt="Kudos 34.5 LPA">
+      </div>
+
+      <!-- Slide Item 3 -->
+      <div class="carousel-card-node">
+        <img src="{{ url_for('static', filename='assets/banner3.jpeg') }}" alt="Demandbase 10 LPA">
+      </div>
+
+      <!-- Slide Item 4 (Added extra item to demonstrate carousel sliding ability) -->
+      <div class="carousel-card-node">
+        <img src="{{ url_for('static', filename='assets/banner4.jpeg') }}" alt="Extra Slide Item">
+      </div>
+
+      <div class="carousel-card-node">
+        <img src="{{ url_for('static', filename='assets/banner5.jpeg') }}" alt="Extra Slide Item">
+      </div>
+
+      <div class="carousel-card-node">
+        <img src="{{ url_for('static', filename='assets/banner6.jpeg') }}" alt="Extra Slide Item">
+      </div>
+
+<div class="carousel-card-node">
+        <img src="{{ url_for('static', filename='assets/banner7.jpeg') }}" alt="Extra Slide Item">
+      </div>
+
+
+      <div class="carousel-card-node">
+        <img src="{{ url_for('static', filename='assets/banner8.jpeg') }}" alt="Extra Slide Item">
+      </div>
+
+      <div class="carousel-card-node">
+        <img src="{{ url_for('static', filename='assets/banner4.jpeg') }}" alt="Extra Slide Item">
+      </div>
+
+
+      <div class="carousel-card-node">
+        <img src="{{ url_for('static', filename='assets/banner10.jpeg') }}" alt="Extra Slide Item">
+      </div>
+
+
+      <div class="carousel-card-node">
+        <img src="{{ url_for('static', filename='assets/banner11.jpeg') }}" alt="Extra Slide Item">
+      </div>
+
+
+      <div class="carousel-card-node">
+        <img src="{{ url_for('static', filename='assets/banner1.jpeg') }}" alt="Extra Slide Item">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="welcome wrap">
+      <div class="welcome-copy">
+        <span class="section-kicker">Welcome to</span>
+        <h2>PRAGATI</h2>
+        <p>PRAGATI ENGINEERING COLLEGE focuses on imparting skills on cutting-edge technologies and shaping the students into disciplined young citizens of good character. The institution lays emphasis on practical experience so students can secure employment in industry and become entrepreneurs.</p>
+        <p>The courses are structured for linear growth and progressive insight into engineering subjects as well as soft skills. Since inception in 2001, Pragati has continued to build a vibrant academic culture.</p>
+        <a class="btn" href="#">More About Pragati</a>
+      </div>
+      <div class="welcome-card">
+        <img src="{{ url_for('static', filename='assets/digital-banner.png') }}" alt="Pragati banner">
+      </div>
+    </section>
+
+
+
+
+    <section class="placements-showcase-section">
+      <h2>2025 Placements</h2>
+      
+      <div class="placements-grid-row">
+        <!-- Card 1: Autodesk -->
+        <div class="placement-stat-node">
+          <div>
+            <div class="selects-count">2</div>
+            <div class="selects-label">Selects</div>
+            <div class="package-value">40 LPA</div>
+          </div>
+          <div class="card-divider-line"></div>
+          <div class="card-logo-footer">
+            <img src="{{ url_for('static', filename='assets/offer-autodesk.jpeg') }}" alt="Autodesk">
+          </div>
+        </div>
+
+        <!-- Card 2: Tech Mahindra -->
+        <div class="placement-stat-node">
+          <div>
+            <div class="selects-count">267</div>
+            <div class="selects-label">Selects</div>
+            <div class="package-value">5.50 LPA</div>
+          </div>
+          <div class="card-divider-line"></div>
+          <div class="card-logo-footer">
+            <img src="{{ url_for('static', filename='assets/recruiter-techm.png') }}" alt="Tech Mahindra">
+          </div>
+        </div>
+
+        <!-- Card 3: TCS -->
+        <div class="placement-stat-node">
+          <div>
+            <div class="selects-count">51</div>
+            <div class="selects-label">Selects</div>
+            <div class="package-value">3.36-9.0 LPA</div>
+          </div>
+          <div class="card-divider-line"></div>
+          <div class="card-logo-footer">
+            <img src="{{ url_for('static', filename='assets/recruiter-tcs.png') }}" alt="TCS">
+          </div>
+        </div>
+
+        <!-- Card 4: Infosys -->
+        <div class="placement-stat-node">
+          <div>
+            <div class="selects-count">109</div>
+            <div class="selects-label">Selects</div>
+            <div class="package-value">3.60 LPA</div>
+          </div>
+          <div class="card-divider-line"></div>
+          <div class="card-logo-footer">
+            <img src="{{ url_for('static', filename='assets/recruiter-infosys.png') }}" alt="Infosys">
+          </div>
+        </div>
+
+        <!-- Card 5: HCLTech -->
+        <div class="placement-stat-node">
+          <div>
+            <div class="selects-count">51</div>
+            <div class="selects-label">Selects</div>
+            <div class="package-value">6 LPA</div>
+          </div>
+          <div class="card-divider-line"></div>
+          <div class="card-logo-footer">
+            <img src="{{ url_for('static', filename='assets/recruiter-hcl.jpg') }}" alt="HCLTech">
+          </div>
+        </div>
+
+        <!-- Card 6: IBM -->
+        <div class="placement-stat-node">
+          <div>
+            <div class="selects-count">3</div>
+            <div class="selects-label">Selects</div>
+            <div class="package-value">11 LPA</div>
+          </div>
+          <div class="card-divider-line"></div>
+          <div class="card-logo-footer">
+            <img src="{{ url_for('static', filename='assets/recruiter-ibm.png') }}" alt="IBM">
+          </div>
+        </div>
+
+        <!-- Card 7: Big Works -->
+        <div class="placement-stat-node">
+          <div>
+            <div class="selects-count">3</div>
+            <div class="selects-label">Selects</div>
+            <div class="package-value">29 LPA*</div>
+          </div>
+          <div class="card-divider-line"></div>
+          <div class="card-logo-footer">
+            <img src="{{ url_for('static', filename='assets/offer-super.jpeg') }}" alt="Big Works">
+          </div>
+        </div>
+      </div>
+
+    </section>
+    
+    <!-- Footnote Component placed directly below section background -->
+    <!-- <div class="cumulative-footer-tag">*-Cumulative</div> -->
+    <section class="news-events wrap">
+      <div class="panel circulars">
+        <div class="section-title left"><span>Circulars</span><h2>Latest Notices</h2></div>
+        <ul>
+          <li><time>June 5, 2026</time><a href="#">I B.Tech II Semester Supplementary (R16) Examinations June 2026 Time Table</a><button>View</button></li>
+          <li><time>June 5, 2026</time><a href="#">I B.Tech II Semester Supplementary (R19) Examinations June 2026 Time Table</a><button>View</button></li>
+          <li><time>June 5, 2026</time><a href="#">I B.Tech II Semester Supplementary (R20) Examinations June 2026 Time Table</a><button>View</button></li>
+        </ul>
+        <a class="text-link" href="#">View All</a>
+      </div>
+      <div class="panel events">
+        <div class="section-title left"><span>Our</span><h2>Events</h2></div>
+        <p>Stay tuned here for upcoming events to showcase your unique talent</p>
+        <article><time>February 20, 2026</time><h3>Engineers’ Week 2026</h3><a href="#">Click Here</a></article>
+        <article><time>November 6, 2025</time><h3>STRIDES 2K26</h3><a href="#">Read More</a></article>
+        <article><time>March 18, 2025</time><h3>PEC-AWS Academy-Press Report</h3><a href="#">Read More</a></article>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="wrap feature-grid">
+        <article>
+          <img src="{{ url_for('static', filename='assets/admissions.jpeg') }}" alt="Admissions">
+          <h3>Admissions</h3>
+          <p>The minimum criterion for admission is 50% marks in the Intermediate/10+2 Examination. Students are admitted primarily based on EAPCET ranks.</p>
+          <a href="#">Download Brochure</a>
+        </article>
+        <article>
+          <img src="{{ url_for('static', filename='assets/academics.jpeg') }}" alt="Academics">
+          <h3>Academics</h3>
+          <p>Every semester has a minimum of eight courses, including laboratory work. Students attend the institute for not less than four years.</p>
+        </article>
+        <article>
+          <img src="{{ url_for('static', filename='assets/campus.jpeg') }}" alt="Campus Life">
+          <h3>Campus Life</h3>
+          <p>Students learn through extra and co-curricular activities, technical, cultural, literary, and industrial clubs during academic life.</p>
+        </article>
+        <article>
+          <img src="{{ url_for('static', filename='assets/sports.jpeg') }}" alt="Sports">
+          <h3>Sports</h3>
+          <p>Spacious playgrounds and indoor facilities support basketball, volleyball, football, cricket, chess, table tennis, carroms, and gym activities.</p>
+        </article>
+      </div>
+    </section>
+
+   
+
+    <section class="awards-rankings">
+  <h2>Awards &amp; Rankings</h2>
+
+  <div class="awards-grid">
+    <div class="award-card">
+      <div class="award-logo">
+        <img src="{{ url_for('static', filename='assets/gallery-1.jpeg') }}" alt="AICTE EduSkills">
+      </div>
+      <p>
+        2nd position under National wide AICTE-Eduskills Virtual
+        Internship in 2022. Total 2150 Internships completed
+      </p>
+    </div>
+
+    <div class="award-card">
+      <div class="award-logo">
+        <img src="{{ url_for('static', filename='assets/cisco.jpeg') }}" alt="Cisco Networking Academy">
+      </div>
+      <p>
+        Recognized as active academy in the CISCO Networking Academy
+        program.
+      </p>
+    </div>
+
+    <div class="award-card">
+      <div class="award-logo">
+        <img src="{{ url_for('static', filename='assets/pearson-vue.png') }}" alt="Pearson VUE">
+      </div>
+      <p>
+        Recognized as Pearson Vue Authorised Test Center
+      </p>
+    </div>
+
+    <div class="award-card">
+      <div class="award-logo">
+        <img src="{{ url_for('static', filename='assets/gfg.png') }}" alt="GeeksforGeeks">
+      </div>
+      <p>
+        Geeks for Geeks has established a college chapter in Pragati
+        Engineering college for the year 2023
+      </p>
+    </div>
+
+    <div class="award-card">
+      <div class="award-logo">
+        <img src="{{ url_for('static', filename='assets/eduskills.png') }}" alt="EduSkills">
+      </div>
+      <p>
+        Recognized as Best Performing Institute under Andhra Pradesh
+        &amp; Telangana Zone for the year 2022 by Eduskills
+      </p>
+    </div>
+  </div>
+</section>
+    
+    <section class="achievements">
+      <div class="wrap">
+        <div class="section-title"><span>Achievements</span><h2>Academic Achievements</h2></div>
+        <p class="achieve-intro">Academic achievements display the academic strength and performance of the institution, including certifications, awards, internships, innovative projects, honours, research work, and student engagement.</p>
+        <div class="counter-grid">
+          <div><strong data-count="501">0</strong><span>Microsoft Azure Global Certifications</span></div>
+          <div><strong data-count="16264">0</strong><span>Internships</span></div>
+          <div><strong data-count="134">0</strong><span>Google Cloud Global Certifications</span></div>
+          <div><strong data-count="181">0</strong><span>AWS Cloud Global Certifications</span></div>
+          <div><strong data-count="242">0</strong><span>ServiceNow Global Certifications</span></div>
+          <div><strong data-count="284">0</strong><span>WIPRO TalentNext Certifications</span></div>
+          <div><strong data-count="117">0</strong><span>EPAM Java &amp; Front End Certifications</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Updated Exact Identity Contact Section Workspace Grid Grid Row Panel -->
+    <section class="exact-contact-container">
+      
+      <!-- Left Panel Informational Block -->
+      <div class="contact-details-panel">
+        <h2>Want to<br>Learn More?</h2>
+        
+        <!-- Address Row -->
+        <div class="contact-info-row">
+          <div class="icon"><i class="fa-solid fa-location-dot"></i></div> <p>3-180, ADB Road, Surampalem,<br>Near Peddapuram, Kakinada Dist,<br>Andhra Pradesh, 533437</p>
+        </div>
+
+        <div class="contact-info-row">
+          <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+          <p>pragati@pragati.ac.in</p>
+        </div>
+
+        
+
+        <!-- Phone Row -->
+        <div class="contact-info-row">
+          <div class="icon"><i class="fa-solid fa-phone-alt"></i></div>
+          <p>+91 7330826667 | 08852 252233</p>
+        </div>
+
+        <!-- Static Embedding Layout Map Block Component container -->
+        <div class="map-container-frame">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3811.460413009589!2d82.20364867597143!3d17.02551521245842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3827ecffffffff%3A0xa126b899451eb9dc!2sPragati%20Engineering%20College!5e0!3m2!1sen!2sin!4v1719160000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Right Panel Active Submission Card Panel -->
+      <div class="contact-form-panel">
+        <form action="#" method="POST" onsubmit="event.preventDefault();">
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Email" required>
+          <input type="tel" placeholder="Mobile Number" required>
+          <textarea placeholder="Message" required></textarea>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+
+    </section>    
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div><img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Pragati Engineering College"><p>Subscribe to our Newsletter</p><input type="email" placeholder="Email*"></div>
+      <div><h3>Quick Links</h3><a>Contact</a><a>Admissions</a><a>Departments</a><a>Examinations</a></div>
+      <div><h3>Contact</h3><p>Surampalem, Kakinada District, Andhra Pradesh</p><p>pragati@pragati.ac.in</p></div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+<!-- --- 🌟 Interactive Animated Floating Bot Component Stack --- -->
+  
+  <!-- Wavy Voice/Video Prompt Popup Element -->
+  <!-- <div class="bot-wavy-prompt-popup" id="botPromptBubble">
+    <div class="wavy-avatar-indicator">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="prompt-text-node">
+      <i class="fa-solid fa-robot"></i>
+      <span>Hi there! Need help?</span>
+    </div>
+  </div> -->
+
+  <div class="bot-wavy-prompt-popup" id="botPromptBubble" onclick="toggleChatWindow()">
+    <img src="{{ url_for('static', filename='assets/bot.png') }}" class="bot-profile-graphic" alt="PEC Bot">
+  </div>
+
+  <button class="chat-toggle-anchor" onclick="toggleChatWindow()">
+    <i class="fa-solid fa-robot"></i> Campus Assistant
+  </button>
+
+  <div class="chat-window-modal" id="chatWidget">
+    <div class="chat-window-header">
+      <i class="fa-solid fa-robot"></i>
+      <span> Pragati Smart Desk</span>
+      <div class="header-action-controls">
+        <button class="control-btn" onclick="toggleMaximizeChat()" title="Maximize / Restore">🗖</button>
+        <button class="control-btn" onclick="toggleChatWindow()" title="Close">✕</button>
+      </div>
+    </div>
+    <div class="chat-stream-viewport" id="chatWindow"></div>
+    <div class="chat-input-toolbar">
+      <input type="text" id="botQueryBox" placeholder="Ask about fees, hostel, placements..." onkeypress="catchBotEnter(event)">
+      <button onclick="sendDirectBotText()">Send</button>
+    </div>
+  </div>
+
+</body>
+</html>
